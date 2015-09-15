@@ -6,30 +6,6 @@
 --------------------Configuration: Taskmanager - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/Taskmanager.res" /d "_DEBUG" /d "_AFXDLL" "I:\TaskManager\TaskManager\Taskmanager\Taskmanager.rc"" 
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP50A9.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Taskmanager.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
-"I:\TaskManager\TaskManager\Taskmanager\Taskmanager.cpp"
-"I:\TaskManager\TaskManager\Taskmanager\TaskmanagerDlg.cpp"
-]
-Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP50A9.tmp" 
-Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP50AA.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Taskmanager.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
-"I:\TaskManager\TaskManager\Taskmanager\StdAfx.cpp"
-]
-Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP50AA.tmp" 
-Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Taskmanager.pdb" /debug /machine:I386 /out:"Debug/Taskmanager.exe" /pdbtype:sept  .\Debug\Taskmanager.obj .\Debug\TaskmanagerDlg.obj .\Debug\StdAfx.obj .\Debug\Taskmanager.res "
-<h3>Output Window</h3>
-Compiling resources...
-Compiling...
-StdAfx.cpp
-Compiling...
-Taskmanager.cpp
-TaskmanagerDlg.cpp
-Generating Code...
-Linking...
 
 
 
