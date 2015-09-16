@@ -2,37 +2,32 @@
 
 [General Info]
 Version=1
-LastClass=CTaskmanagerDlg
+LastClass=CTaskManagerDlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
-NewFileInclude2=#include "Taskmanager.h"
+NewFileInclude2=#include "TaskManager.h"
 
-ClassCount=4
-Class1=CTaskmanagerApp
-Class2=CTaskmanagerDlg
+ClassCount=3
+Class1=CTaskManagerApp
+Class2=CTaskManagerDlg
 Class3=CAboutDlg
 
-ResourceCount=3
-Resource1=IDD_ABOUTBOX
+ResourceCount=4
+Resource1=IDD_TASKMANAGER_DIALOG
 Resource2=IDR_MAINFRAME
-Resource3=IDD_TASKMANAGER_DIALOG
+Resource3=IDD_ABOUTBOX
+Resource4=IDR_MENU_MAIN
 
-[CLS:CTaskmanagerApp]
+[CLS:CTaskManagerApp]
 Type=0
-HeaderFile=Taskmanager.h
-ImplementationFile=Taskmanager.cpp
+HeaderFile=TaskManager.h
+ImplementationFile=TaskManager.cpp
 Filter=N
-
-[CLS:CTaskmanagerDlg]
-Type=0
-HeaderFile=TaskmanagerDlg.h
-ImplementationFile=TaskmanagerDlg.cpp
-Filter=D
 
 [CLS:CAboutDlg]
 Type=0
-HeaderFile=TaskmanagerDlg.h
-ImplementationFile=TaskmanagerDlg.cpp
+HeaderFile=TaskManagerDlg.h
+ImplementationFile=TaskManagerDlg.cpp
 Filter=D
 
 [DLG:IDD_ABOUTBOX]
@@ -46,7 +41,30 @@ Control4=IDOK,button,1342373889
 
 [DLG:IDD_TASKMANAGER_DIALOG]
 Type=1
-Class=CTaskmanagerDlg
+Class=CTaskManagerDlg
 ControlCount=1
 Control1=IDC_STATIC,static,1342177294
+
+[MNU:IDR_MENU_MAIN]
+Type=1
+Class=?
+Command1=IDM_MENU_EXIT
+Command2=IDM_MENU_ADD
+Command3=IDM_MENU_EXPORT
+Command4=IDM_MENU_IMPORT
+Command5=IDM_MENU_QUERYALL
+Command6=IDM_MENU_QUERY
+Command7=IDM_MENU_HOTKEY
+Command8=IDM_MENU_SAVE
+Command9=IDM_MENU_ABOUT
+CommandCount=9
+
+[CLS:CTaskManagerDlg]
+Type=0
+HeaderFile=view\taskmanagerdlg.h
+ImplementationFile=view\taskmanagerdlg.cpp
+BaseClass=CDialog
+Filter=D
+VirtualFilter=dWC
+LastObject=IDM_MENU_ABOUT
 

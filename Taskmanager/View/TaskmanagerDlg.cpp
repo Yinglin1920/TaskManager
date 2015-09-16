@@ -1,9 +1,12 @@
-// TaskmanagerDlg.cpp : implementation file
+// TaskManagerDlg.cpp : implementation file
 //
 
 #include "stdafx.h"
-#include "Taskmanager.h"
-#include "TaskmanagerDlg.h"
+#include "TaskManager.h"
+#include "TaskManagerDlg.h"
+
+//#include"AppException.h"
+//#include"TestService.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -57,38 +60,40 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CTaskmanagerDlg dialog
+// CTaskManagerDlg dialog
 
-CTaskmanagerDlg::CTaskmanagerDlg(CWnd* pParent /*=NULL*/)
-	: CDialog(CTaskmanagerDlg::IDD, pParent)
+CTaskManagerDlg::CTaskManagerDlg(CWnd* pParent /*=NULL*/)
+	: CDialog(CTaskManagerDlg::IDD, pParent)
 {
-	//{{AFX_DATA_INIT(CTaskmanagerDlg)
+	//{{AFX_DATA_INIT(CTaskManagerDlg)
 		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CTaskmanagerDlg::DoDataExchange(CDataExchange* pDX)
+void CTaskManagerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CTaskmanagerDlg)
+	//{{AFX_DATA_MAP(CTaskManagerDlg)
 		// NOTE: the ClassWizard will add DDX and DDV calls here
 	//}}AFX_DATA_MAP
 }
 
-BEGIN_MESSAGE_MAP(CTaskmanagerDlg, CDialog)
-	//{{AFX_MSG_MAP(CTaskmanagerDlg)
+BEGIN_MESSAGE_MAP(CTaskManagerDlg, CDialog)
+	//{{AFX_MSG_MAP(CTaskManagerDlg)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_COMMAND(IDM_MENU_EXIT, OnMenuExit)
+	ON_COMMAND(IDM_MENU_ABOUT, OnMenuAbout)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CTaskmanagerDlg message handlers
+// CTaskManagerDlg message handlers
 
-BOOL CTaskmanagerDlg::OnInitDialog()
+BOOL CTaskManagerDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
@@ -115,12 +120,30 @@ BOOL CTaskmanagerDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 	
+
+/*	try
+	{
+		CTestService testService;
+		testService.Test();
+	}catch(CAppException* e)
+	{
+		MessageBox(e->GetErrorMessage());
+		e->Delete();
+	}catch(...)
+	{
+		MessageBox("程序异常");
+	}
+
+	*/
+    //加载菜单
+	m_menu.LoadMenu(IDR_MENU_MAIN);
+	SetMenu(&m_menu);
 	// TODO: Add extra initialization here
 	
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CTaskmanagerDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CTaskManagerDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -137,7 +160,7 @@ void CTaskmanagerDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
 
-void CTaskmanagerDlg::OnPaint() 
+void CTaskManagerDlg::OnPaint() 
 {
 	if (IsIconic())
 	{
@@ -164,7 +187,20 @@ void CTaskmanagerDlg::OnPaint()
 
 // The system calls this to obtain the cursor to display while the user drags
 //  the minimized window.
-HCURSOR CTaskmanagerDlg::OnQueryDragIcon()
+HCURSOR CTaskManagerDlg::OnQueryDragIcon()
 {
 	return (HCURSOR) m_hIcon;
+}
+
+void CTaskManagerDlg::OnMenuExit() 
+{
+	// TODO: Add your command handler code here
+	CDialog::OnCancel();
+}
+
+void CTaskManagerDlg::OnMenuAbout() 
+{
+	// TODO: Add your command handler code here
+	CAboutDlg dlg;
+	dlg.DoModal();
 }

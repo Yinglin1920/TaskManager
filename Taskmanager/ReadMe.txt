@@ -1,46 +1,46 @@
 ========================================================================
-       MICROSOFT FOUNDATION CLASS LIBRARY : Taskmanager
+       MICROSOFT FOUNDATION CLASS LIBRARY : TaskManager
 ========================================================================
 
 
-AppWizard has created this Taskmanager application for you.  This application
+AppWizard has created this TaskManager application for you.  This application
 not only demonstrates the basics of using the Microsoft Foundation classes
 but is also a starting point for writing your application.
 
 This file contains a summary of what you will find in each of the files that
-make up your Taskmanager application.
+make up your TaskManager application.
 
-Taskmanager.dsp
+TaskManager.dsp
     This file (the project file) contains information at the project level and
     is used to build a single project or subproject. Other users can share the
     project (.dsp) file, but they should export the makefiles locally.
 
-Taskmanager.h
+TaskManager.h
     This is the main header file for the application.  It includes other
     project specific headers (including Resource.h) and declares the
-    CTaskmanagerApp application class.
+    CTaskManagerApp application class.
 
-Taskmanager.cpp
+TaskManager.cpp
     This is the main application source file that contains the application
-    class CTaskmanagerApp.
+    class CTaskManagerApp.
 
-Taskmanager.rc
+TaskManager.rc
     This is a listing of all of the Microsoft Windows resources that the
     program uses.  It includes the icons, bitmaps, and cursors that are stored
     in the RES subdirectory.  This file can be directly edited in Microsoft
 	Visual C++.
 
-Taskmanager.clw
+TaskManager.clw
     This file contains information used by ClassWizard to edit existing
     classes or add new classes.  ClassWizard also uses this file to store
     information needed to create and edit message maps and dialog data
     maps and to create prototype member functions.
 
-res\Taskmanager.ico
+res\TaskManager.ico
     This is an icon file, which is used as the application's icon.  This
-    icon is included by the main resource file Taskmanager.rc.
+    icon is included by the main resource file TaskManager.rc.
 
-res\Taskmanager.rc2
+res\TaskManager.rc2
     This file contains resources that are not edited by Microsoft 
 	Visual C++.  You should place all resources not editable by
 	the resource editor in this file.
@@ -52,10 +52,10 @@ res\Taskmanager.rc2
 
 AppWizard creates one dialog class:
 
-TaskmanagerDlg.h, TaskmanagerDlg.cpp - the dialog
-    These files contain your CTaskmanagerDlg class.  This class defines
+TaskManagerDlg.h, TaskManagerDlg.cpp - the dialog
+    These files contain your CTaskManagerDlg class.  This class defines
     the behavior of your application's main dialog.  The dialog's
-    template is in Taskmanager.rc, which can be edited in Microsoft
+    template is in TaskManager.rc, which can be edited in Microsoft
 	Visual C++.
 
 
@@ -64,7 +64,7 @@ Other standard files:
 
 StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
-    named Taskmanager.pch and a precompiled types file named StdAfx.obj.
+    named TaskManager.pch and a precompiled types file named StdAfx.obj.
 
 Resource.h
     This is the standard header file, which defines new resource IDs.

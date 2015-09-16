@@ -1,9 +1,9 @@
-// Taskmanager.cpp : Defines the class behaviors for the application.
+// TaskManager.cpp : Defines the class behaviors for the application.
 //
 
 #include "stdafx.h"
-#include "Taskmanager.h"
-#include "TaskmanagerDlg.h"
+#include "TaskManager.h"
+#include "TaskManagerDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -12,10 +12,10 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
-// CTaskmanagerApp
+// CTaskManagerApp
 
-BEGIN_MESSAGE_MAP(CTaskmanagerApp, CWinApp)
-	//{{AFX_MSG_MAP(CTaskmanagerApp)
+BEGIN_MESSAGE_MAP(CTaskManagerApp, CWinApp)
+	//{{AFX_MSG_MAP(CTaskManagerApp)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG
@@ -23,23 +23,23 @@ BEGIN_MESSAGE_MAP(CTaskmanagerApp, CWinApp)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CTaskmanagerApp construction
+// CTaskManagerApp construction
 
-CTaskmanagerApp::CTaskmanagerApp()
+CTaskManagerApp::CTaskManagerApp()
 {
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// The one and only CTaskmanagerApp object
+// The one and only CTaskManagerApp object
 
-CTaskmanagerApp theApp;
+CTaskManagerApp theApp;
 
 /////////////////////////////////////////////////////////////////////////////
-// CTaskmanagerApp initialization
+// CTaskManagerApp initialization
 
-BOOL CTaskmanagerApp::InitInstance()
+BOOL CTaskManagerApp::InitInstance()
 {
 	AfxEnableControlContainer();
 
@@ -54,7 +54,7 @@ BOOL CTaskmanagerApp::InitInstance()
 	Enable3dControlsStatic();	// Call this when linking to MFC statically
 #endif
 
-	CTaskmanagerDlg dlg;
+	CTaskManagerDlg dlg;
 	m_pMainWnd = &dlg;
 	int nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
